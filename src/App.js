@@ -18,28 +18,36 @@ export default function App() {
   }, []);
   return (
     <div className="Container">
-      <div className="App">
-        <h1>Lista de Casos Covid</h1>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Estado </th>
-              <th>Casos </th>
-              <th>Mortes </th>
-            </tr>
-          </thead>
-          <tbody>
-            {casos.map(function (item, index) {
-              return (
-                <tr key={index}>
-                  <td>{item.uf}</td>
-                  <td>{item.cases}</td>
-                  <td>{item.deaths}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="App row">
+        <div className="col-10 offset-1">
+          <h1 className="py-5">Casos e mortes por estado</h1>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Estado </th>
+                <th>UF </th>
+                <th>Casos </th>
+                <th>Mortes </th>
+                <th>Suspeitos </th>
+                <th>Falsos </th>
+              </tr>
+            </thead>
+            <tbody>
+              {casos.map(function (item, index) {
+                return (
+                  <tr key={index}>
+                    <td>{item.state}</td>
+                    <td>{item.uf}</td>
+                    <td>{item.cases}</td>
+                    <td>{item.deaths}</td>
+                    <td>{item.suspects}</td>
+                    <td>{item.refuses}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
