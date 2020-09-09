@@ -1,6 +1,6 @@
 # React Covid
 
-[Você pode testar a aplicação clicando aqui](https://csb-v67ck-i6kbyqevw.vercel.app)
+[Você pode testar a aplicação clicando aqui](https://react-covid-seven.vercel.app)
 
 ## Conheça o desenvolvedor:
 
