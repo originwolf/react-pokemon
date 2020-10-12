@@ -19,7 +19,7 @@ export default function App() {
   return (
     <div className="Container">
       <div className="App row">
-        <div className="col-10 offset-1">
+        <div className="col-10 offset-1 text-center">
           <h1 className="py-5">Pokémon e seus movimentos</h1>
           <table className="table">
             <thead>
