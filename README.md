@@ -14,9 +14,9 @@
 ## Sobre o projeto:
 
 > **Ideia princial**
-#### Desenvolver um sistema que adquira os dados de infecções e mortes por covid-19 por meio de uma API e apresente os dados na tela.
+#### Desenvolver um sistema que adquira os dados de pokémon por meio de uma API e apresente os dados na tela.
 
-#### Esta aplicação separa os casos individualmente por Estado (UF), listando separadamente os dados de infecções e mortes.
+#### Esta aplicação lista o nome do pokémon e um link para sua lista de movimentos.
 
 ---
 
@@ -25,5 +25,3 @@
 ---
 
 **Você deve permitir o uso de JavaScript para visualizar a aplicação**
-
-### Criado com CodeSandbox
