@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 
 function buscaDados() {
-  const url = "https://covid19-brazil-api.now.sh/api/report/v1";
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=151";
   return fetch(url)
     .then(async (response) => await response.json())
     .then(async (dados) => {
@@ -12,36 +12,28 @@ function buscaDados() {
 }
 
 export default function App() {
-  const [casos, setCasos] = useState([]);
+  const [poke, setPoke] = useState([]);
   useEffect(() => {
-    buscaDados().then((dados) => setCasos(dados.data));
+    buscaDados().then((dados) => setPoke(dados.results));
   }, []);
   return (
     <div className="Container">
       <div className="App row">
         <div className="col-10 offset-1">
-          <h1 className="py-5">Casos e mortes por estado</h1>
+          <h1 className="py-5">Pokémon e seus movimentos</h1>
           <table className="table">
             <thead>
               <tr>
-                <th>Estado </th>
-                <th>UF </th>
-                <th>Casos </th>
-                <th>Mortes </th>
-                <th>Suspeitos </th>
-                <th>Falsos </th>
+                <th>Nome </th>
+                <th>Movimentos </th>
               </tr>
             </thead>
             <tbody>
-              {casos.map(function (item, index) {
+              {poke.map(function (item, index) {
                 return (
                   <tr key={index}>
-                    <td>{item.state}</td>
-                    <td>{item.uf}</td>
-                    <td>{item.cases}</td>
-                    <td>{item.deaths}</td>
-                    <td>{item.suspects}</td>
-                    <td>{item.refuses}</td>
+                    <td>{item.name}</td>
+                    <td>{item.url}</td>
                   </tr>
                 );
               })}
