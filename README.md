@@ -1,6 +1,6 @@
-# React Covid
+# React Pokemon
 
-[Você pode testar a aplicação clicando aqui](https://react-covid-seven.vercel.app)
+[Você pode testar a aplicação clicando aqui](https://react-pokemon-nine.vercel.app)
 
 ## Conheça o desenvolvedor:
 
